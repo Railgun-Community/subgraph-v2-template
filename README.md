@@ -19,11 +19,11 @@ graph codegen
 
 graph build --network mainnet
 
-// Options: mainnet, goerli, matic, mumbai, bsc, arbitrum-one, arbitrum-goerli
+// Options: mainnet, goerli, sepolia, matic, mumbai, bsc, arbitrum-one, arbitrum-goerli
 
 graph deploy --product hosted-service railgun-community/railgun-v2-ethereum
 
-// Options: railgun-v2-ethereum, railgun-v2-goerli, railgun-v2-bsc, railgun-v2-polygon, railgun-v2-mumbai, railgun-v2-arbitrum, railgun-v2-arbitrum-goerli
+// Options: railgun-v2-ethereum, railgun-v2-goerli, railgun-v2-bsc, railgun-v2-polygon, railgun-v2-mumbai, railgun-v2-arbitrum, railgun-v2-arbitrum-goerli, railgun-v2-sepolia
 
 ### Master build and deploy
 

@@ -68,5 +68,15 @@
       "address": "0xfbc165e5601c9b658b63f71debe06a9f296f1ab7",
       "startBlock": 2611949
     }
+  },
+  "sepolia": {
+    "RailgunSmartWallet": {
+      "address": "0xe8bEa99BB438C2f3D533604D33258d74d5eE4824",
+      "startBlock": 4495479
+    },
+    "PoseidonT4": {
+      "address": "0xdd1e3cb1659e6702ce7b8cf0013a41b91e658a07",
+      "startBlock": 4495479
+    }
   }
 }

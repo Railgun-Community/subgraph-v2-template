@@ -7,6 +7,7 @@
 ./replace-chain-id 80001 && graph build --network mumbai && graph deploy --product hosted-service railgun-community/railgun-v2-mumbai; \
 ./replace-chain-id 42161 && graph build --network arbitrum-one && graph deploy --product hosted-service railgun-community/railgun-v2-arbitrum; \
 ./replace-chain-id 421613 && graph build --network arbitrum-goerli && graph deploy --product hosted-service railgun-community/railgun-v2-arbitrum-goerli;
+./replace-chain-id 11155111 && graph build --network sepolia && graph deploy --product hosted-service railgun-community/railgun-v2-sepolia;
 
 # Reset
 ./replace-chain-id 1
