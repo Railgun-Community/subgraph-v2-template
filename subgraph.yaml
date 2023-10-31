@@ -7,7 +7,7 @@ dataSources:
     network: sepolia
     source:
       abi: RailgunSmartWallet
-      address: "0xe8bEa99BB438C2f3D533604D33258d74d5eE4824"
+      address: "0x942D5026b421cf2705363A525897576cFAdA5964"
       startBlock: 4495479
     mapping:
       kind: ethereum/events
