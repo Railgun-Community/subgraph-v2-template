@@ -71,12 +71,22 @@
   },
   "sepolia": {
     "RailgunSmartWallet": {
-      "address": "0x942D5026b421cf2705363A525897576cFAdA5964",
-      "startBlock": 4495479
+      "address": "0xeCFCf3b4eC647c4Ca6D49108b311b7a7C9543fea",
+      "startBlock": 5784866
     },
     "PoseidonT4": {
-      "address": "0xdd1e3cb1659e6702ce7b8cf0013a41b91e658a07",
-      "startBlock": 4495479
+      "address": "0xf799c805287c104c998aafac772c51beb8d0de37",
+      "startBlock": 5784866
+    }
+  },
+  "amoy": {
+    "RailgunSmartWallet": {
+      "address": "0xD1aC80208735C7f963Da560C42d6BD82A8b175B5",
+      "startBlock": 6666136
+    },
+    "PoseidonT4": {
+      "address": "0x59a2ca95b2754df919506726cfceed805624f4a2",
+      "startBlock": 6666118
     }
   }
 }

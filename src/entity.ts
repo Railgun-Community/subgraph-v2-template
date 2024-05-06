@@ -1,4 +1,4 @@
-import { Bytes, BigInt, log } from '@graphprotocol/graph-ts';
+import { Bytes, BigInt } from '@graphprotocol/graph-ts';
 import {
   CommitmentPreimage,
   Token,
@@ -23,7 +23,7 @@ import { bigIntToBytes } from './utils';
 export const saveToken = (
   tokenType: i32,
   tokenAddress: Bytes,
-  tokenSubID: BigInt,
+  tokenSubID: BigInt
 ): Token => {
   const tokenSubIDBytes = bigIntToBytes(tokenSubID);
   const id = getTokenHash(tokenType, tokenAddress, tokenSubID);
@@ -49,7 +49,7 @@ export const saveCommitmentPreimage = (
   id: Bytes,
   npk: Bytes,
   token: Token,
-  value: BigInt,
+  value: BigInt
 ): CommitmentPreimage => {
   const entity = new CommitmentPreimage(id);
 
@@ -63,7 +63,7 @@ export const saveCommitmentPreimage = (
 
 export const saveCiphertextFromBytesArray = (
   id: Bytes,
-  ciphertext: Bytes[],
+  ciphertext: Bytes[]
 ): Ciphertext => {
   const entity = new Ciphertext(id);
 
@@ -79,7 +79,7 @@ export const saveLegacyCommitmentCiphertext = (
   id: Bytes,
   ciphertext: Ciphertext,
   ephemeralKeys: BigInt[],
-  memo: BigInt[],
+  memo: BigInt[]
 ): LegacyCommitmentCiphertext => {
   const entity = new LegacyCommitmentCiphertext(id);
 
@@ -97,7 +97,7 @@ export const saveCommitmentCiphertext = (
   blindedSenderViewingKey: Bytes,
   blindedReceiverViewingKey: Bytes,
   annotationData: Bytes,
-  memo: Bytes,
+  memo: Bytes
 ): CommitmentCiphertext => {
   const entity = new CommitmentCiphertext(id);
 
@@ -117,7 +117,7 @@ export const saveNullifier = (
   blockTimestamp: BigInt,
   transactionHash: Bytes,
   treeNumber: BigInt,
-  nullifier: Bytes,
+  nullifier: Bytes
 ): Nullifier => {
   const entity = new Nullifier(id);
 
@@ -143,7 +143,7 @@ export const saveLegacyGeneratedCommitment = (
   treePosition: BigInt,
   commitmentHash: BigInt,
   preimage: CommitmentPreimage,
-  encryptedRandom: BigInt[],
+  encryptedRandom: BigInt[]
 ): LegacyGeneratedCommitment => {
   const entity = new LegacyGeneratedCommitment(id);
 
@@ -174,7 +174,7 @@ export const saveLegacyEncryptedCommitment = (
   batchStartTreePosition: BigInt,
   treePosition: BigInt,
   commitmentHash: BigInt,
-  ciphertext: LegacyCommitmentCiphertext,
+  ciphertext: LegacyCommitmentCiphertext
 ): LegacyEncryptedCommitment => {
   const entity = new LegacyEncryptedCommitment(id);
 
@@ -207,7 +207,7 @@ export const saveShieldCommitment = (
   preimage: CommitmentPreimage,
   encryptedBundle: Bytes[],
   shieldKey: Bytes,
-  fee: BigInt | null,
+  fee: BigInt | null
 ): ShieldCommitment => {
   const entity = new ShieldCommitment(id);
 
@@ -240,7 +240,7 @@ export const saveTransactCommitment = (
   batchStartTreePosition: BigInt,
   treePosition: BigInt,
   commitmentHash: BigInt,
-  ciphertext: CommitmentCiphertext,
+  ciphertext: CommitmentCiphertext
 ): TransactCommitment => {
   const entity = new TransactCommitment(id);
 
@@ -270,7 +270,7 @@ export const saveUnshield = (
   token: Token,
   amount: BigInt,
   fee: BigInt,
-  eventLogIndex: BigInt,
+  eventLogIndex: BigInt
 ): Unshield => {
   const entity = new Unshield(id);
 
