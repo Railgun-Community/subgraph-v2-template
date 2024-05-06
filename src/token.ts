@@ -1,22 +1,17 @@
 import { Bytes, crypto, BigInt } from '@graphprotocol/graph-ts';
-import {
-  bigIntToBytes,
-  bigIntToBytes,
-  padTo32BytesStart,
-  reverseBytes,
-} from './utils';
+import { bigIntToBytes, padTo32BytesStart, reverseBytes } from './utils';
 
 const SNARK_PRIME_BIG_INT = BigInt.fromString(
-  '21888242871839275222246405745257275088548364400416034343698204186575808495617',
+  '21888242871839275222246405745257275088548364400416034343698204186575808495617'
 );
 
 const getTokenDataHashNFT = (
   tokenType: i32,
   tokenAddress: Bytes,
-  tokenSubID: BigInt,
+  tokenSubID: BigInt
 ): Bytes => {
   const tokenTypeBytes = padTo32BytesStart(
-    bigIntToBytes(BigInt.fromString(tokenType.toString())),
+    bigIntToBytes(BigInt.fromString(tokenType.toString()))
   );
   const tokenAddressBytes = padTo32BytesStart(tokenAddress);
   const tokenSubIDBytes = padTo32BytesStart(bigIntToBytes(tokenSubID));
@@ -30,7 +25,7 @@ const getTokenDataHashNFT = (
 
   const bytesReversed = reverseBytes(Bytes.fromByteArray(hashed));
   const modulo = BigInt.fromUnsignedBytes(bytesReversed).mod(
-    SNARK_PRIME_BIG_INT,
+    SNARK_PRIME_BIG_INT
   );
   return bigIntToBytes(modulo);
 };
@@ -38,7 +33,7 @@ const getTokenDataHashNFT = (
 export const getTokenHash = (
   tokenType: i32,
   tokenAddress: Bytes,
-  tokenSubID: BigInt,
+  tokenSubID: BigInt
 ): Bytes => {
   switch (tokenType) {
     case 0: // TokenType.ERC20:

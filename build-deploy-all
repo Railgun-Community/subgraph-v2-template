@@ -5,6 +5,7 @@
 ./replace-chain-id 56 && graph build --network bsc && graph deploy --product hosted-service railgun-community/railgun-v2-bsc; \
 ./replace-chain-id 137 && graph build --network matic && graph deploy --product hosted-service railgun-community/railgun-v2-polygon; \
 ./replace-chain-id 80001 && graph build --network mumbai && graph deploy --product hosted-service railgun-community/railgun-v2-mumbai; \
+./replace-chain-id 80002 && graph build --network polygon-amoy && graph deploy --product hosted-service railgun-community/railgun-v2-amoy; \
 ./replace-chain-id 42161 && graph build --network arbitrum-one && graph deploy --product hosted-service railgun-community/railgun-v2-arbitrum; \
 ./replace-chain-id 421613 && graph build --network arbitrum-goerli && graph deploy --product hosted-service railgun-community/railgun-v2-arbitrum-goerli;
 ./replace-chain-id 11155111 && graph build --network sepolia && graph deploy --product hosted-service railgun-community/railgun-v2-sepolia;

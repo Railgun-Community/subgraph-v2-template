@@ -1,11 +1,11 @@
-import { Bytes, BigInt, Address } from '@graphprotocol/graph-ts';
+import { BigInt, Address } from '@graphprotocol/graph-ts';
 import { PoseidonT4 } from './class/PoseidonT4';
 import { getPoseidonT4ContractAddress } from './contracts';
 
 export const poseidonT4Hash = (
   input1: BigInt,
   input2: BigInt,
-  input3: BigInt,
+  input3: BigInt
 ): BigInt => {
   const addressHex = getPoseidonT4ContractAddress();
   const contractAddress = Address.fromString(addressHex);
@@ -20,7 +20,7 @@ export const poseidonT4Hash = (
 export const getNoteHash = (
   npk: BigInt,
   tokenHash: BigInt,
-  value: BigInt,
+  value: BigInt
 ): BigInt => {
   return poseidonT4Hash(npk, tokenHash, value);
 };

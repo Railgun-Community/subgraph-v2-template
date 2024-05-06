@@ -16,8 +16,12 @@ export const getPoseidonT4ContractAddress = (): string => {
       return '0x753f0f9ba003dda95eb9284533cf5b0f19e441dc'; // Arbitrum
     case 80001:
       return '0x22dd4ff4631bb0ad56e0ed6274dcce04d96af84e'; // Mumbai
+    case 80002:
+      return '0x59a2ca95b2754df919506726cfceed805624f4a2'; // Polygon Amoy
     case 421613:
       return '0xfbc165e5601c9b658b63f71debe06a9f296f1ab7'; // Arbitrum Goerli
+    case 11155111:
+      return '0xf799c805287c104c998aafac772c51beb8d0de37'; // Sepolia
   }
   throw new Error(`Unrecognized chain ID: ${chainId.toString()}`);
 };
